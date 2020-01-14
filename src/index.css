@@ -1,3 +1,22 @@
 body {
   background-color: #55b491;
 }
+p {
+  display: inline;
+  font-size: 30px;
+  padding: 3px;
+}
+#inputs,
+#output {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+form,
+#title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}

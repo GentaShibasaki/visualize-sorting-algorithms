@@ -9,8 +9,7 @@ const Sort = require("./Sort");
 // A link to our styles!
 require("./index.css");
 
-const sort = new Sort();
-sort.sort();
+const sort = new Sort([]);
 
 function createCheesyTitle(slogan) {
   const container = document.createElement("h1");
@@ -19,7 +18,7 @@ function createCheesyTitle(slogan) {
   return container;
 }
 
-const title = createCheesyTitle(sort.returnValue("Re-Engineer Yourself"));
+const title = createCheesyTitle(sort.returnValue("Quick Sort"));
 document.getElementById("title").appendChild(title);
 
 /*
@@ -37,4 +36,14 @@ function changeTitle(event) {
 const form = document.querySelector("form");
 document.addEventListener("DOMContentLoaded", () => {
   form.onsubmit = changeTitle;
+});
+
+const executionButton = document.querySelector("#execution");
+const placeHolder = document.querySelectorAll("p");
+const inputs = document.querySelectorAll("#inputs");
+executionButton.addEventListener("click", () => {
+  let array = [];
+  inputs.forEach((input) => array.push(+input.value));
+  const sort = new Sort(array);
+  sort.sort(placeHolder, inputs);
 });
