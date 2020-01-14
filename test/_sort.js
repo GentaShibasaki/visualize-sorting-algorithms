@@ -46,4 +46,10 @@ describe("Sort", () => {
     sortTest.sort();
     expect(sortTest.return()).to.deep.equal([1, 2, 3, 4, 5]);
   });
+
+  it("should return an ordered array", () => {
+    let sortTest = new Sort([3, 4, 5, 1, 2]);
+    sortTest.sort();
+    expect(sortTest.return()).to.deep.equal([1, 2, 3, 4, 5]);
+  });
 });

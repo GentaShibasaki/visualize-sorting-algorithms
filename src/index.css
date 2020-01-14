@@ -5,13 +5,20 @@ p {
   display: inline;
   font-size: 30px;
   padding: 3px;
+  transition: all 0.3s ease;
 }
-#inputs,
-#output {
+#inputs {
   width: 30px;
   height: 30px;
   text-align: center;
   font-size: 20px;
+  transition: all 0.3s ease;
+}
+.disappeared {
+  color: #55b491;
+}
+.bright {
+  background-color: indianred;
 }
 
 form,
